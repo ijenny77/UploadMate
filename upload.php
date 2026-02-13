@@ -32,7 +32,12 @@
         #submit{
             background-color:rgb(29,32,38);
             width: 50%;
+            height:5vh;
             margin-left:4.5rem;
+            
+        }
+        #submit:hover{
+            box-shadow:2px 2px 5px 5px rgb(98,236,223);
         }
         #display{
             width: 77%;
@@ -42,15 +47,28 @@
             background-color:rgb(40,44,54);
             border:1px solid grey;
             border-radius:7px;
-            width:60%;
+            width:80%;
             padding-left:1%;
             padding-top:2%;
             padding-bottom: 2%;
-            margin-bottom:2%;
-            margin-left:17%;
+            margin-bottom:10%;
+            margin-left:10%;
         }
         #message{
             padding-left:2rem;
+        }
+        input,textarea,button{
+            font-family:inherit;
+            font-size:inherit;
+            color:inherit;
+        }
+        input[type="file"]::file-selector-button {
+            background-color:rgb(29,32,38) ;
+            color: white;
+            border:1px solid grey;
+            border-radius:5px;
+            padding: 5px 10px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -77,9 +95,9 @@
     }
     ?>
      <form method="post" enctype="multipart/form-data">
-        <p id="selecting">Select file:</p>
+        <p id="selecting">Upload File</p>
         <div class="chooseFile">
-            <input type="file" name="myfile" id="inputSpace"><br>
+            <input type="file" name="myfile" id="inputSpace" style="background-color:transparent"><br>
         </div>
         <input type="submit" value="Upload File" id="submit" name="submit"><br>
         <p id="message"><?php echo $message ?></p>
