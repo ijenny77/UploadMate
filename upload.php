@@ -18,6 +18,7 @@
             margin-left:auto;
             margin-right:auto;
             margin-top:15rem;
+            box-shadow:2px 2px 15px 15px black;
         }
         #selecting{
             text-align: center;
